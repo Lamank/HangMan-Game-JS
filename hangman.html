@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Baskerville&family=Merienda:wght@700&family=Sansita+Swashed:wght@800&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hangman.css">
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="wrapper container">
+      <h1>Hangman Movies</h1>
+      <div class="letter-div"></div>
+      <div class="hint-div hidden">
+        <p>Clue: </p>
+        <p class="hint-txt"></p>
+      </div>
+      <div class="hangman-container container d-flex flex-column">
+          <div class="row">
+          <div class="left col-xl-5">
+              <div class="puppet">
+                  <!-- <img src="https://www.marionettes.cz/images/loutky/detail/prd-486/Czech-Marionettes-vihk-czech-marionettes-hand-carved-2.d545.jpg" width="300px" height="320px" alt=""> -->
+                  <img src="puppet.gif" width="260px" alt="puppet picture">
+              </div>
+          </div>
+          <div class="right col-xl-7 ">
+              <div class="secret-word">Secret Word</div>
+            <div class="word-div"></div>
+            <h3>Lives: <span class="lives">7</span></h3>
+            <div class="buttons container d-flex flex-column">
+              <div class="row">
+                <button class="hint-btn col-3">Hint</button>
+                <button class="reset-btn col-3">Reset</button>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notif hidden">
+        <h2>Congratulations!!</h2>
+        <h3 class="notif-content">You won!</h3>
+        <h4>Correct Word: <span class="notif-span"></span></h4>
+        <div class="button d-flex align-items-center justify-content-center">
+            <button class="notif-btn ">Play again</button>
+        </div>
+    </div>
+      <audio autoplay controls loop id="music">
+        <source src="music.mp3" type="audio/mp3">
+      </audio>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="hangman.js"></script>
+  </body>
+</html>
